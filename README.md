@@ -10,3 +10,17 @@ following commands:
 ```
 alias vue='docker run -it --rm -v "$PWD":"$PWD" -w "$PWD" ebiven/vue-cli vue'
 ```
+
+Using this via docker-compose:
+
+```
+version: '2'
+services:
+  web:
+    image: ebiven/vue-cli
+    command: npm run dev
+    volumes:
+      - .:/code
+    ports:
+      - "8080:8080"
+```
