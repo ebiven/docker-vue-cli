@@ -8,7 +8,7 @@ In your .bashrc, .zshrc, or similar file include aliases for the
 following commands:
 
 ```
-alias vue='docker run -it --rm -v "$PWD":"$PWD" -w "$PWD" ebiven/vue-cli vue'
+alias vue='docker run -it --rm -v "$PWD":"$PWD" -w "$PWD" -u "$(id -u)" ebiven/vue-cli vue'
 ```
 
 Using this via docker-compose:
