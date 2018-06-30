@@ -2,10 +2,14 @@ FROM node:slim
 
 MAINTAINER Eric Biven <eric@biven.us>
 
-RUN npm install --quiet --global \
-      vue-cli
+#Vue 2.x and 3.x support
+ARG VUECLI=2
 
-RUN mkdir /code
-COPY . /code
+ADD install-vue.sh /install-vue.sh
+
+RUN ["bash", "/install-vue.sh"]
+
 
 WORKDIR /code
+
+COPY . /code

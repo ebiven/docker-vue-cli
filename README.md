@@ -11,11 +11,10 @@ following commands:
 alias vue='docker run -it --rm -v "$PWD":"$PWD" -w "$PWD"  -u "$(id -u)" ebiven/vue-cli vue'
 ```
 
-
 Using this via docker-compose:
 
 ```
-version: '2'
+version: '3'
 services:
   web:
     image: ebiven/vue-cli
