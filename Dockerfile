@@ -8,4 +8,6 @@ RUN npm install --quiet --global \
 RUN mkdir /code
 COPY . /code
 
+EXPOSE 8080
+
 WORKDIR /code
